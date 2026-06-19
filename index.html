@@ -1,0 +1,222 @@
+import Link from "next/link";
+
+export default function HomePage() {
+  return (
+    <main className="bg-black text-white overflow-hidden">
+
+      {/* HERO */}
+      <section className="relative min-h-screen flex items-center justify-center px-6">
+
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-pink-500 rounded-full blur-[150px] opacity-30 animate-pulse"></div>
+
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full blur-[150px] opacity-30 animate-pulse"></div>
+
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,20,147,0.15),transparent_70%)]"></div>
+        </div>
+
+        <div className="relative z-10 text-center max-w-5xl">
+
+          <img
+            src="/images/dj-gemandi-logo.png"
+            alt="DJ GEM&I"
+            className="w-72 mx-auto mb-10"
+          />
+
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            Live Vocals.
+            <br />
+            DJ Entertainment.
+            <br />
+            <span className="text-pink-500">
+              Unforgettable Nights.
+            </span>
+          </h1>
+
+          <p className="text-xl text-gray-300 mt-8 max-w-3xl mx-auto">
+            UK Garage, 90s Classics, Club Anthems and Live Vocals
+            for Bars, Weddings, Corporate Events and Private Parties.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+
+            <Link
+              href="/booking"
+              className="bg-pink-500 hover:bg-pink-600 transition px-8 py-4 rounded-full font-semibold"
+            >
+              Book Now
+            </Link>
+
+            <Link
+              href="/media"
+              className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition"
+            >
+              Watch Us Live
+            </Link>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ABOUT PREVIEW */}
+      <section className="py-24 px-6">
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <h2 className="text-4xl font-bold mb-6">
+              About DJ GEM&I
+            </h2>
+
+            <p className="text-gray-300 leading-relaxed">
+              DJ GEM&I combines a professional DJ and a live female vocalist
+              to create an energetic entertainment experience that keeps
+              dancefloors full and audiences engaged.
+            </p>
+
+            <p className="text-gray-300 leading-relaxed mt-4">
+              From UK Garage and R&B to Club Anthems and 90s Classics,
+              every performance is tailored to your crowd.
+            </p>
+
+            <Link
+              href="/about"
+              className="inline-block mt-6 text-pink-500 font-semibold"
+            >
+              Learn More →
+            </Link>
+          </div>
+
+          <div className="bg-zinc-900 rounded-3xl p-10 border border-pink-500/20">
+            <h3 className="text-2xl font-bold mb-6 text-pink-500">
+              Why Choose Us?
+            </h3>
+
+            <ul className="space-y-4">
+              <li>✓ Professional DJ</li>
+              <li>✓ Live Female Vocalist</li>
+              <li>✓ Interactive Crowd Engagement</li>
+              <li>✓ Premium Sound & Atmosphere</li>
+              <li>✓ Weddings & Corporate Specialists</li>
+              <li>✓ High-Energy Performances</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* SERVICES */}
+      <section className="py-24 bg-zinc-950 px-6">
+
+        <div className="max-w-7xl mx-auto">
+
+          <h2 className="text-4xl font-bold text-center mb-14">
+            Our Services
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            {[
+              "Bars & Pubs",
+              "Brunches",
+              "Weddings",
+              "Corporate Events",
+              "Private Parties",
+              "Festivals & Clubs",
+            ].map((service) => (
+              <div
+                key={service}
+                className="bg-black border border-zinc-800 rounded-2xl p-8 hover:border-pink-500 transition"
+              >
+                <h3 className="text-2xl font-semibold mb-4">
+                  {service}
+                </h3>
+
+                <p className="text-gray-400">
+                  Bespoke entertainment packages tailored
+                  to your event and audience.
+                </p>
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-24 px-6">
+
+        <div className="max-w-5xl mx-auto text-center">
+
+          <h2 className="text-4xl font-bold mb-12">
+            Client Testimonials
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              <p>
+                "Absolutely incredible performance.
+                The dancefloor was packed all night."
+              </p>
+
+              <div className="mt-4 text-pink-500">
+                ★★★★★
+              </div>
+            </div>
+
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              <p>
+                "The live vocals took our event to another level."
+              </p>
+
+              <div className="mt-4 text-pink-500">
+                ★★★★★
+              </div>
+            </div>
+
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              <p>
+                "Professional, friendly and unforgettable."
+              </p>
+
+              <div className="mt-4 text-pink-500">
+                ★★★★★
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-pink-600 text-center px-6">
+
+        <h2 className="text-5xl font-bold mb-6">
+          Ready To Book DJ GEM&I?
+        </h2>
+
+        <p className="text-xl mb-8">
+          Get in touch today to secure your date.
+        </p>
+
+        <a
+          href="tel:07891702115"
+          className="bg-white text-black px-8 py-4 rounded-full font-semibold inline-block"
+        >
+          Call Now
+        </a>
+
+      </section>
+
+    </main>
+  );
+}
